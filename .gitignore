@@ -1,0 +1,5 @@
+# não quero subir esses arquivos
+*.psd
+
+# pastas que eu não quero subir
+node_modules
