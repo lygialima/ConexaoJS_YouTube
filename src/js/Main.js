@@ -1,14 +1,38 @@
-var PIXI = require('pixi.js');
+import Mamiferos from './Mamiferos';
 
-//Test that Pixi is working
-console.log(PIXI);
+var cachorro = new Mamiferos();
+cachorro.voz = "latido";
+var gato = new Mamiferos();
+gato.voz = "miado";
 
-let renderer = PIXI.autoDetectRenderer(256,256); //Create the renderer
+console.log(cachorro.voz); // para acessar as propriedades do objeto eu uso o "."
+console.log(gato.corDoOlho);
+console.log(gato.voz);
 
-document.body.appendChild(renderer.view); //Add the canvas to the HTML document
+/*
+Defina o objeto, a idéia em si da definição de um objeto é chamado axioma na matemática. 
+A gente sabe o que é mas não sabemos definir.
 
-let stage = new PIXI.Container(); //Create a container object called the "stage"
+Um objeto sempre terá propriedades.
 
-renderer.render(stage); //Tell the "renderer" to "render" the "stage"
+Algumas classes sempre terá ações.
 
-renderer.view.style.border = "1px dashed black";
+Classe chamada animais vão ter propriedades, características.
+Por ex, quantidade de patas, membros, cor de olho, etc..
+
+E meu objeto classe vai ter ações, por ex, andar, falar,...
+
+Mas nem todo objeto tem ações e sim somente propriedades,
+como um copo por exemplo, por ser um objeto inanimado.
+
+Toda minha classe vão ter propriedade, as características quedefinem meu objeto.
+
+Um carro, no caso, teria propriedades e ações que chamamos de métodos.
+
+Propriedade de um carro:
+a velocidades que ele consegue atingir;
+aceleração é uma ação, por ex., trocar marcha... seriam métodos
+
+toda característica do meu objeto eu chamo de propriedades.
+Toda ação do meu objeto eu chamo de métodos.
+*/
