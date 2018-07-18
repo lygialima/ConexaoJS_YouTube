@@ -1,38 +1,60 @@
+
+/* Primeiro eu importo esse objeto com 'import' para poder acessar suas propriedades */
+
 import Mamiferos from './Mamiferos';
 
 var cachorro = new Mamiferos();
-cachorro.voz = "latido";
+cachorro.voz = "latido"; // para acessar as propriedades do objeto eu uso o "."
+
 var gato = new Mamiferos();
 gato.voz = "miado";
 
-console.log(cachorro.voz); // para acessar as propriedades do objeto eu uso o "."
+console.log(cachorro.voz);
 console.log(gato.corDoOlho);
 console.log(gato.voz);
 
 /*
-Defina o objeto, a idéia em si da definição de um objeto é chamado axioma na matemática. 
+
+A idéia em si da definição de um objeto é chamada axioma na matemática. 
 A gente sabe o que é mas não sabemos definir.
 
-Um objeto sempre terá propriedades.
+O que é uma classe e o que é um objeto?
 
-Algumas classes sempre terá ações.
+Um objeto sempre terá propriedades. Algumas classes sempre terá ações.
 
-Classe chamada animais vão ter propriedades, características.
-Por ex, quantidade de patas, membros, cor de olho, etc..
+Em uma classe sempre deverá conter propriedades/ características de um objeto como:
+quantidade de patas, membros, cor de olho, etc..
 
-E meu objeto classe vai ter ações, por ex, andar, falar,...
+E, também, sempre conterá ações, como:
+andar, falar, etc...
 
-Mas nem todo objeto tem ações e sim somente propriedades,
+Mas nem todo objeto contém ações e sim somente propriedades,
 como um copo por exemplo, por ser um objeto inanimado.
-
-Toda minha classe vão ter propriedade, as características quedefinem meu objeto.
 
 Um carro, no caso, teria propriedades e ações que chamamos de métodos.
 
-Propriedade de um carro:
-a velocidades que ele consegue atingir;
-aceleração é uma ação, por ex., trocar marcha... seriam métodos
+Ex., propriedade de um carro: a velocidade que ele consegue atingir.
+Aceleração é uma ação, por ex., trocar marcha... seriam métodos.
 
-toda característica do meu objeto eu chamo de propriedades.
+Toda característica do meu objeto eu chamo de propriedades.
 Toda ação do meu objeto eu chamo de métodos.
+
 */
+
+
+/*
+
+Passo-a-Passo Comandos Bash
+
+1 Acessando a pasta do projeto
+	cd Documents/DOCUMENTOS/Lygia_WEB\ DESIGN/4-\ ALURA/Front-end/JAVASCRIPT/outros\ cursos/ConexaoJS_YouTube
+
+2 Rodando o servidor
+	npm run dev
+
+*/
+
+
+
+
+

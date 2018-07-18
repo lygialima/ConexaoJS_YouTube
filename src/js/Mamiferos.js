@@ -1,5 +1,5 @@
 class Mamiferos {
-	// eu preciso definir algumas propriedades que vão definir o meu objeto
+/* É preciso escrever algumas propriedades que vão definir um objeto */
 
 	voz = "latido";
 	corDoOlho = "preto";
@@ -8,6 +8,10 @@ class Mamiferos {
 
 export default Mamiferos;
 
-// esse objeto está definido mas ainda não existe
-// quando a gente cria um objeto real a gente instancia, 
-// por isso vamos importar lá na classe Main
+/*
+
+Agora, este objeto está definido mas ainda não existe.
+Para existir, quando criamos um objeto real a gente instancia, 
+por isso, vamos importar esse objeto lá na classe Main.
+
+*/
