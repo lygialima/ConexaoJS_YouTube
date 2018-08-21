@@ -1,3 +1,2 @@
 
-Acompanhando aula dos vídeos do YouTube do canal Conexão JS, 
-do pessoal que trabalha na Telefônica Educação Digital.
+Aprimorando meus conhecimentos em Node, Webpack, Git e conceitos de Objetos e Classes com Javascript, através do canal ConexaoJS, no YouTube.
