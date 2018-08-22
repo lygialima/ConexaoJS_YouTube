@@ -43,11 +43,8 @@ Toda ação do meu objeto eu chamo de métodos.
 
 
 /*
-
 Comandos Bash
 
 1 Rodando o servidor
 	npm run dev
-
-123 testando
 */
