@@ -15,7 +15,7 @@ console.log(gato.voz);
 
 /*
 
-A idéia em si da definição de um objeto é chamada axioma na matemática. 
+A idéia em si da definição de um objeto é chamada axioma na matemática.
 A gente sabe o que é mas não sabemos definir.
 
 O que é uma classe e o que é um objeto?
@@ -44,17 +44,9 @@ Toda ação do meu objeto eu chamo de métodos.
 
 /*
 
-Passo-a-Passo Comandos Bash
+Comandos Bash
 
-1 Acessando a pasta do projeto
-	cd Documents/DOCUMENTOS/Lygia_WEB\ DESIGN/4-\ ALURA/Front-end/JAVASCRIPT/outros\ cursos/ConexaoJS_YouTube
-
-2 Rodando o servidor
+1 Rodando o servidor
 	npm run dev
 
 */
-
-
-
-
-
