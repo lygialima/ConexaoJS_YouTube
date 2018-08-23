@@ -77,6 +77,7 @@ var _Mamiferos2 = _interopRequireDefault(_Mamiferos);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var cachorro = new _Mamiferos2.default();
+<<<<<<< HEAD
 /* Primeiro eu importo esse objeto com 'import' para poder acessar suas propriedades */
 
 cachorro.voz = "latido"; // para acessar as propriedades do objeto eu uso o "."
@@ -128,6 +129,44 @@ Passo-a-Passo Comandos Bash
 
 */
 
+=======
+cachorro.voz = "latido";
+var gato = new _Mamiferos2.default();
+gato.voz = "miado";
+
+console.log(cachorro.voz); // para acessar as propriedades do objeto eu uso o "."
+console.log(gato.corDoOlho);
+console.log(gato.voz);
+
+/*
+Defina o objeto, a idéia em si da definição de um objeto é chamado axioma na matemática. 
+A gente sabe o que é mas não sabemos definir.
+
+Um objeto sempre terá propriedades.
+
+Algumas classes sempre terá ações.
+
+Classe chamada animais vão ter propriedades, características.
+Por ex, quantidade de patas, membros, cor de olho, etc..
+
+E meu objeto classe vão ter ações, por ex, andar, falar,...
+
+Mas nem todo objeto tem ações e sim somente propriedades,
+como um copo por exemplo, por ser um objeto inanimado.
+
+Toda minha classe vão ter propriedade, as características quedefinem meu objeto.
+
+Um carro, no caso, teria propriedades e ações que chamamos de métodos.
+
+Propriedade de um carro:
+a velocidades que ele consegue atingir;
+aceleração é uma ação, por ex., trocar marcha... seriam métodos
+
+toda característica do meu objeto eu chamo de propriedades.
+Toda ação do meu objeto eu chamo de métodos.
+*/
+
+>>>>>>> teste2
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -147,12 +186,17 @@ var Mamiferos = function Mamiferos() {
 	this.voz = "latido";
 	this.corDoOlho = "preto";
 }
+<<<<<<< HEAD
 /* É preciso escrever algumas propriedades que vão definir um objeto */
+=======
+// eu preciso definir algumas propriedades que vão definir o meu objeto
+>>>>>>> teste2
 
 ;
 
 exports.default = Mamiferos;
 
+<<<<<<< HEAD
 /*
 
 Agora, este objeto está definido mas ainda não existe.
@@ -160,6 +204,11 @@ Para existir, quando criamos um objeto real a gente instancia,
 por isso, vamos importar esse objeto lá na classe Main.
 
 */
+=======
+// esse objeto está definido mas ainda não existe
+// quando a gente cria um objeto real a gente instancia, 
+// por isso vamos importar lá na classe Main
+>>>>>>> teste2
 
 /***/ })
 /******/ ]);
