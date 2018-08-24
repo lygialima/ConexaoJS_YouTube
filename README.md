@@ -29,6 +29,6 @@ Para começar, siga os seguintes passos básicos:
 ### Nota
 
 Essa é a base de um projeto experimental. Procure usar os mesmos objetos e classes,
-criando algo novo. Em seguida, envie seus commits com `pull request` para que eu
-possa analisar e aceitar a sua intervenção neste projeto, assim aprenderei mais
-com quem entende ou possui mais tempo :)
+criando algo novo. Em seguida, envie um `pull request` para que eu possa analisar
+e aceitar a sua intervenção neste projeto, assim aprenderei mais com quem entende
+ou possui mais tempo :)
