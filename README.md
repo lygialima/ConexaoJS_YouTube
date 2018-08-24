@@ -6,7 +6,7 @@ o canal Conexão JS, no YouTube.
 
 URL do canal: https://www.youtube.com/channel/UCeEwlqZ631A3dKfe46I70pA
 
-# Instruções
+## Instruções
 
 Para começar, siga os seguintes passos básicos:
 
@@ -23,8 +23,9 @@ Para começar, siga os seguintes passos básicos:
 
 ...e voalá! É só usar!
 
-## Nota
+### Nota
 
 Essa é a base de um projeto experimental. Procure usar os mesmos objetos e classes,
-criando algo novo. Em seguida, envie seus commits, assim aprenderei mais com quem
-entende ou possui mais tempo :)
+criando algo novo. Em seguida, envie seus commits com `pull request` para que eu
+possa analisar e aceitar a sua intervenção neste projeto, assim aprenderei mais
+com quem entende ou possui mais tempo :)
