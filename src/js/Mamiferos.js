@@ -1,9 +1,9 @@
+// Este é um exemplo de objeto; é preciso escrever algumas propriedades que vão definir o objeto
+
 class Mamiferos {
-/* É preciso escrever algumas propriedades que vão definir um objeto */
 
 	voz = "latido";
 	corDoOlho = "preto";
-
 }
 
 export default Mamiferos;

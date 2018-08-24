@@ -1,10 +1,10 @@
-
-/* Primeiro eu importo esse objeto com 'import' para poder acessar suas propriedades */
-
+// Primeiro, eu importo aquele objeto Mamiferos com 'import' para poder acessar suas propriedades
 import Mamiferos from './Mamiferos';
 
+/* Depois, eu instancio o objeto para torná-lo real */
 var cachorro = new Mamiferos();
-cachorro.voz = "latido"; // para acessar as propriedades do objeto eu uso o "."
+// para acessar as propriedades do objeto, eu uso o "." e posso modificar/ reescrever o valor que ele recebe
+cachorro.voz = "latido";
 
 var gato = new Mamiferos();
 gato.voz = "miado";
@@ -18,33 +18,41 @@ console.log(gato.voz);
 A idéia em si da definição de um objeto é chamada axioma na matemática.
 A gente sabe o que é mas não sabemos definir.
 
+
 O que é uma classe e o que é um objeto?
 
-Um objeto sempre terá propriedades. Algumas classes sempre terá ações.
 
-Em uma classe sempre deverá conter propriedades/ características de um objeto como:
-quantidade de patas, membros, cor de olho, etc..
+OBJETO
 
-E, também, sempre conterá ações, como:
+Um objeto é qualquer coisa que possua características.
+
+Ele sempre terá características ou propriedades, mas nem sempre ele terá ações.
+
+Por exemplo, um copo pode ser um simples objeto inanimado.
+
+
+CLASSE
+
+Uma classe é um objeto que possui características, como:
+quantidade de patas, membros, cor de olho, etc... e possui ações como:
 andar, falar, etc...
 
-Mas nem todo objeto contém ações e sim somente propriedades,
-como um copo por exemplo, por ser um objeto inanimado.
+As ações chamamos de métodos.
 
-Um carro, no caso, teria propriedades e ações que chamamos de métodos.
+Vamos a um exemplo:
 
-Ex., propriedade de um carro: a velocidade que ele consegue atingir.
-Aceleração é uma ação, por ex., trocar marcha... seriam métodos.
+Objeto: carro
+Propriedade/ característica: velocidade (a velocidade que consegue atingir)
+Métodos/ ações: aceleração, trocar marcha
+
+Obs.: Toda classe deve se iniciar com letra maiúscula
+
+
+Recapitulando,...
 
 Toda característica do meu objeto eu chamo de propriedades.
 Toda ação do meu objeto eu chamo de métodos.
+Um objeto possui somente propriedades.
+Uma classe possui as propriedades do objeto + seus métodos.
 
-*/
-
-
-/*
-Comandos Bash
-
-1 Rodando o servidor
-	npm run dev
 */

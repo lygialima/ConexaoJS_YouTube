@@ -76,11 +76,11 @@ var _Mamiferos2 = _interopRequireDefault(_Mamiferos);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* Depois, eu instancio o objeto para torná-lo real */
 var cachorro = new _Mamiferos2.default();
-<<<<<<< HEAD
-/* Primeiro eu importo esse objeto com 'import' para poder acessar suas propriedades */
-
-cachorro.voz = "latido"; // para acessar as propriedades do objeto eu uso o "."
+// para acessar as propriedades do objeto, eu uso o "." e posso modificar/ reescrever o valor que ele recebe
+// Primeiro, eu importo aquele objeto Mamiferos com 'import' para poder acessar suas propriedades
+cachorro.voz = "latido";
 
 var gato = new _Mamiferos2.default();
 gato.voz = "miado";
@@ -91,82 +91,48 @@ console.log(gato.voz);
 
 /*
 
-A idéia em si da definição de um objeto é chamada axioma na matemática. 
+A idéia em si da definição de um objeto é chamada axioma na matemática.
 A gente sabe o que é mas não sabemos definir.
+
 
 O que é uma classe e o que é um objeto?
 
-Um objeto sempre terá propriedades. Algumas classes sempre terá ações.
 
-Em uma classe sempre deverá conter propriedades/ características de um objeto como:
-quantidade de patas, membros, cor de olho, etc..
+OBJETO
 
-E, também, sempre conterá ações, como:
+Um objeto é qualquer coisa que possua características.
+
+Ele sempre terá características ou propriedades, mas nem sempre ele terá ações.
+
+Por exemplo, um copo pode ser um simples objeto inanimado.
+
+
+CLASSE
+
+Uma classe é um objeto que possui características, como:
+quantidade de patas, membros, cor de olho, etc... e possui ações como:
 andar, falar, etc...
 
-Mas nem todo objeto contém ações e sim somente propriedades,
-como um copo por exemplo, por ser um objeto inanimado.
+As ações chamamos de métodos.
 
-Um carro, no caso, teria propriedades e ações que chamamos de métodos.
+Vamos a um exemplo:
 
-Ex., propriedade de um carro: a velocidade que ele consegue atingir.
-Aceleração é uma ação, por ex., trocar marcha... seriam métodos.
+Objeto: carro
+Propriedade/ característica: velocidade (a velocidade que consegue atingir)
+Métodos/ ações: aceleração, trocar marcha
+
+Obs.: Toda classe deve se iniciar com letra maiúscula
+
+
+Recapitulando,...
 
 Toda característica do meu objeto eu chamo de propriedades.
 Toda ação do meu objeto eu chamo de métodos.
+Um objeto possui somente propriedades.
+Uma classe possui as propriedades do objeto + seus métodos.
 
 */
 
-/*
-
-Passo-a-Passo Comandos Bash
-
-1 Acessando a pasta do projeto
-	cd Documents/DOCUMENTOS/Lygia_WEB\ DESIGN/4-\ ALURA/Front-end/JAVASCRIPT/outros\ cursos/ConexaoJS_YouTube
-
-2 Rodando o servidor
-	npm run dev
-
-*/
-
-=======
-cachorro.voz = "latido";
-var gato = new _Mamiferos2.default();
-gato.voz = "miado";
-
-console.log(cachorro.voz); // para acessar as propriedades do objeto eu uso o "."
-console.log(gato.corDoOlho);
-console.log(gato.voz);
-
-/*
-Defina o objeto, a idéia em si da definição de um objeto é chamado axioma na matemática. 
-A gente sabe o que é mas não sabemos definir.
-
-Um objeto sempre terá propriedades.
-
-Algumas classes sempre terá ações.
-
-Classe chamada animais vão ter propriedades, características.
-Por ex, quantidade de patas, membros, cor de olho, etc..
-
-E meu objeto classe vão ter ações, por ex, andar, falar,...
-
-Mas nem todo objeto tem ações e sim somente propriedades,
-como um copo por exemplo, por ser um objeto inanimado.
-
-Toda minha classe vão ter propriedade, as características quedefinem meu objeto.
-
-Um carro, no caso, teria propriedades e ações que chamamos de métodos.
-
-Propriedade de um carro:
-a velocidades que ele consegue atingir;
-aceleração é uma ação, por ex., trocar marcha... seriam métodos
-
-toda característica do meu objeto eu chamo de propriedades.
-Toda ação do meu objeto eu chamo de métodos.
-*/
-
->>>>>>> teste2
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -180,35 +146,24 @@ Object.defineProperty(exports, "__esModule", {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// Este é um exemplo de objeto; é preciso escrever algumas propriedades que vão definir o objeto
+
 var Mamiferos = function Mamiferos() {
 	_classCallCheck(this, Mamiferos);
 
 	this.voz = "latido";
 	this.corDoOlho = "preto";
-}
-<<<<<<< HEAD
-/* É preciso escrever algumas propriedades que vão definir um objeto */
-=======
-// eu preciso definir algumas propriedades que vão definir o meu objeto
->>>>>>> teste2
-
-;
+};
 
 exports.default = Mamiferos;
 
-<<<<<<< HEAD
 /*
 
 Agora, este objeto está definido mas ainda não existe.
-Para existir, quando criamos um objeto real a gente instancia, 
+Para existir, quando criamos um objeto real a gente instancia,
 por isso, vamos importar esse objeto lá na classe Main.
 
 */
-=======
-// esse objeto está definido mas ainda não existe
-// quando a gente cria um objeto real a gente instancia, 
-// por isso vamos importar lá na classe Main
->>>>>>> teste2
 
 /***/ })
 /******/ ]);
