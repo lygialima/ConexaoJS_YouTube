@@ -10,16 +10,19 @@ URL do canal: https://www.youtube.com/channel/UCeEwlqZ631A3dKfe46I70pA
 
 Para começar, siga os seguintes passos básicos:
 
-1 - Instale o Git (https://gitforwindows.org/ ou https://git-scm.com/) em sua máquina,
+1 - Clique em "Fork", ali no topo da página, para ter uma cópia do repositório do
+    projeto na sua conta GitHub
+
+2 - Instale o Git (https://gitforwindows.org/ ou https://git-scm.com/) em sua máquina,
     e dê um `git clone` do projeto
 
-2 - Faça o download do NodeJS na versão atual (Current) pelo site https://nodejs.org/en/
+3 - Faça o download do NodeJS na versão atual (Current) pelo site https://nodejs.org/en/
     e instale como administrador
 
-3 - Use o NPM (Node Package Manager) no seu terminal para instalação de todos os
+4 - Use o NPM (Node Package Manager) no seu terminal para instalação de todos os
     pacotes com `npm install`
 
-4 - Digite o nome da tarefa `npm run dev` para rodar seu servidor
+5 - Digite o nome da tarefa `npm run dev` para rodar seu servidor
 
 ...e voalá! É só usar!
 
