@@ -14,22 +14,24 @@
         "url": "https://gitlab.com/lygialima/aula01/issues"
     },
     "homepage": "https://gitlab.com/lygialima/aula01#README",
-    "dependencies": {},
+    "dependencies": {
+        "latest-version": "^4.0.0"
+    },
     "devDependencies": {
         "babel-cli": "^6.26.0",
-        "babel-loader": "^7.1.2",
+        "babel-loader": "^8.0.0",
         "babel-plugin-transform-class-properties": "^6.24.1",
-        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-plugin-transform-decorators-legacy": "^1.3.5",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-private-properties": "^1.0.2",
         "babel-plugin-transform-strict-mode": "^6.24.1",
         "babel-preset-env": "^1.7.0",
-        "browser-sync": "^2.24.6",
-        "browser-sync-webpack-plugin": "^1.2.0",
-        "clean-webpack-plugin": "^0.1.17",
-        "cross-env": "^5.1.3",
-        "html-webpack-plugin": "^2.30.1",
-        "webpack": "^3.10.0"
+        "browser-sync": "^2.24.7",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "clean-webpack-plugin": "^0.1.19",
+        "cross-env": "^5.2.0",
+        "html-webpack-plugin": "^3.2.0",
+        "webpack": "^4.17.1"
     },
     "scripts": {
         "dev": "webpack"
