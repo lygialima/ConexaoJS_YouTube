@@ -1,17 +1,31 @@
-// Primeiro, eu importo aquele objeto Mamiferos com 'import' para poder acessar suas propriedades
-import Mamiferos from './Mamiferos';
+import Gato from './Gato.js';
+import Cachorro from './Cachorro.js';
+
+var bingo = new Cachorro();
+var felix = new Gato();
+
+bingo.falar();
+felix.falar();
+
+
+/*
+ANOTAÇÃO ANTERIOR
+Primeiro, eu importo aquele objeto Mamiferos com 'import' para poder acessar suas propriedades
+*/
+
+//import Mamiferos from './Mamiferos';
 
 /* Depois, eu instancio o objeto para torná-lo real */
-var cachorro = new Mamiferos();
+//var cachorro = new Mamiferos();
 // para acessar as propriedades do objeto, eu uso o "." e posso modificar/ reescrever o valor que ele recebe
-cachorro.voz = "latido";
+//cachorro.voz = "latido";
 
-var gato = new Mamiferos();
-gato.voz = "miado";
+//var gato = new Mamiferos();
+//gato.voz = "miado";
 
-console.log(cachorro.voz);
-console.log(gato.corDoOlho);
-console.log(gato.voz);
+//console.log(cachorro.voz);
+//console.log(gato.corDoOlho);
+//console.log(gato.voz);
 
 /*
 
