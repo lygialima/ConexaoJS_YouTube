@@ -64,78 +64,36 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/* Vamos criar um método falar() dentro da classe Mamiferos */
-
-var Mamiferos = function () {
-	function Mamiferos() {
-		_classCallCheck(this, Mamiferos);
-
-		this.voz = "";
-		this.corDoOlho = "";
-	}
-
-	_createClass(Mamiferos, [{
-		key: "falar",
-		value: function falar() {
-			/* this representa a classe Mamiferos;
-   voz é a variável que estou pegando dentro dessa classe */
-			console.log(this.voz);
-		}
-	}]);
-
-	return Mamiferos;
-}();
-
-exports.default = Mamiferos;
-
-/* ANOTAÇÃO ANTERIOR */
-
-/* Este é um exemplo de objeto; é preciso escrever algumas propriedades que vão
-definir o objeto */
-
-// class Mamiferos {
-// 	voz = "";
-// 	corDoOlho = "preto";
-// }
-
-// export default Mamiferos;
-
-/*
-Agora, este objeto está definido mas ainda não existe.
-Para existir, quando criamos um objeto real a gente instancia,
-por isso, vamos importar esse objeto lá na classe Main.
-*/
-
-/***/ }),
+/* 0 */,
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _Gato = __webpack_require__(2);
+var _Botao = __webpack_require__(4);
 
-var _Gato2 = _interopRequireDefault(_Gato);
+var _Botao2 = _interopRequireDefault(_Botao);
 
-var _Cachorro = __webpack_require__(3);
+var _SuperBotao = __webpack_require__(5);
 
-var _Cachorro2 = _interopRequireDefault(_Cachorro);
+var _SuperBotao2 = _interopRequireDefault(_SuperBotao);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.onload = function () {
+    var bt = new _Botao2.default();
+    bt.addText('clique aqui');
+
+    var superbt = new _SuperBotao2.default();
+    superbt.addText('super botao');
+    superbt.addEvents();
+
+    document.body.appendChild(bt.view);
+    document.body.appendChild(superbt.view);
+};
+
+/* ANOTAÇÃO ANTERIOR */
 
 /*
 HERANÇA
@@ -144,11 +102,15 @@ Serve para quando queremos evoluir um objeto, sem se desfazer do objeto anterior
 Herda as características do objeto anterior e acrescenta/ extende novas funcionalidades.
 */
 
-var bingo = new _Cachorro2.default();
-var felix = new _Gato2.default();
+// import Gato from './Gato';
+// import Cachorro from './Cachorro';
 
-bingo.falar();
-felix.falar();
+// var bingo = new Cachorro();
+// var felix = new Gato();
+
+// bingo.falar();
+// felix.falar();
+
 
 /* ANOTAÇÃO ANTERIOR */
 
@@ -206,7 +168,9 @@ Uma classe possui as propriedades do objeto + seus métodos.
 */
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -216,9 +180,50 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _Mamiferos2 = __webpack_require__(0);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Mamiferos3 = _interopRequireDefault(_Mamiferos2);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Botao = function () {
+    // null significa que não tem valor nenhum
+
+    function Botao() {
+        _classCallCheck(this, Botao);
+
+        this.view = null;
+
+        this.view = document.createElement('div');
+        this.view.style.cssText = '\n            width: 250px;\n            background: red;\n            padding: 20px 0;\n            color: white;\n            font-family: sans-serif;\n            font-size: 30px;\n            text-align: center;\n        ';
+    }
+
+    _createClass(Botao, [{
+        key: 'addText',
+        value: function addText(text) {
+            this.view.innerText = text;
+        }
+    }]);
+
+    return Botao;
+}();
+
+exports.default = Botao;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _Botao2 = __webpack_require__(4);
+
+var _Botao3 = _interopRequireDefault(_Botao2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -228,81 +233,38 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Gato = function (_Mamiferos) {
-    _inherits(Gato, _Mamiferos);
+var SuperBotao = function (_Botao) {
+    _inherits(SuperBotao, _Botao);
 
-    function Gato() {
-        _classCallCheck(this, Gato);
+    function SuperBotao() {
+        _classCallCheck(this, SuperBotao);
 
-        var _this = _possibleConstructorReturn(this, (Gato.__proto__ || Object.getPrototypeOf(Gato)).call(this));
+        var _this = _possibleConstructorReturn(this, (SuperBotao.__proto__ || Object.getPrototypeOf(SuperBotao)).call(this));
 
-        _this.voz = "miado";
+        _this.view.style.cursor = 'pointer';
+        _this.view.style.marginTop = '20px';
         return _this;
     }
 
-    return Gato;
-}(_Mamiferos3.default);
+    _createClass(SuperBotao, [{
+        key: 'addEvents',
+        value: function addEvents() {
+            var _this2 = this;
 
-exports.default = Gato;
+            this.view.addEventListener('mouseover', function () {
+                _this2.view.style.background = 'green';
+            });
 
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+            this.view.addEventListener('mouseout', function () {
+                _this2.view.style.background = 'red';
+            });
+        }
+    }]);
 
-"use strict";
+    return SuperBotao;
+}(_Botao3.default);
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _Mamiferos2 = __webpack_require__(0);
-
-var _Mamiferos3 = _interopRequireDefault(_Mamiferos2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               A classe Cachorro.js é uma nova classe criada, que herdará as mesmas características
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               da classe Mamiferos (com extends) e terá novas características próprias desse
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               animal cachorro; para tanto, é necessário importar a classe Mamiferos (com import);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no final, exportamos a classe Cachorro (com export) para conseguirmos utilizá-la
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               em outros lugares
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
-
-var Cachorro = function (_Mamiferos) {
-    _inherits(Cachorro, _Mamiferos);
-
-    /* dentro desse bloco representa coisas que só a classe Cachorro possui */
-    /*
-    Constructor representa uma função especial dentro de uma classe; tudo o que
-    estiver dentro do método constructor() significa que vai ser executado no
-    momento em que for instanciado o objeto Cachorro
-    */
-    function Cachorro() {
-        _classCallCheck(this, Cachorro);
-
-        var _this = _possibleConstructorReturn(this, (Cachorro.__proto__ || Object.getPrototypeOf(Cachorro)).call(this));
-
-        _this.voz = "latido";
-        /*
-        Sempre q se extende uma classe, ela é chamada de superclasse. No caso,
-        Mamiferos é a superclasse e Cachorro é a subclasse; esse this faz
-        referência às características existentes dentro da classe Mamiferos,
-        logo, é obrigatório declarar super() acima de tudo, ao pegar características
-        do objeto herdado
-        */
-        return _this;
-    }
-
-    return Cachorro;
-}(_Mamiferos3.default);
-
-exports.default = Cachorro;
+exports.default = SuperBotao;
 
 /***/ })
 /******/ ]);

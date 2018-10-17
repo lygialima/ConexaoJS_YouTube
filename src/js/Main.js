@@ -1,3 +1,24 @@
+import Botao from './Botao';
+import SuperBotao from './SuperBotao';
+
+window.onload = () => {
+    var bt = new Botao();
+    bt.addText('clique aqui');
+
+    var superbt = new SuperBotao();
+    superbt.addText('super botao');
+    superbt.addEvents();
+
+    document.body.appendChild(bt.view);
+    document.body.appendChild(superbt.view);
+}
+
+
+
+
+
+/* ANOTAÇÃO ANTERIOR */
+
 /*
 HERANÇA
 
@@ -5,14 +26,14 @@ Serve para quando queremos evoluir um objeto, sem se desfazer do objeto anterior
 Herda as características do objeto anterior e acrescenta/ extende novas funcionalidades.
 */
 
-import Gato from './Gato';
-import Cachorro from './Cachorro';
+// import Gato from './Gato';
+// import Cachorro from './Cachorro';
 
-var bingo = new Cachorro();
-var felix = new Gato();
+// var bingo = new Cachorro();
+// var felix = new Gato();
 
-bingo.falar();
-felix.falar();
+// bingo.falar();
+// felix.falar();
 
 
 
