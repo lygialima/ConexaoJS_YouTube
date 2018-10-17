@@ -60,137 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Gato = __webpack_require__(3);
-
-var _Gato2 = _interopRequireDefault(_Gato);
-
-var _Cachorro = __webpack_require__(1);
-
-var _Cachorro2 = _interopRequireDefault(_Cachorro);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var bingo = new _Cachorro2.default();
-var felix = new _Gato2.default();
-
-bingo.falar();
-felix.falar();
-
-/*
-ANOTAÇÃO ANTERIOR
-Primeiro, eu importo aquele objeto Mamiferos com 'import' para poder acessar suas propriedades
-*/
-
-//import Mamiferos from './Mamiferos';
-
-/* Depois, eu instancio o objeto para torná-lo real */
-//var cachorro = new Mamiferos();
-// para acessar as propriedades do objeto, eu uso o "." e posso modificar/ reescrever o valor que ele recebe
-//cachorro.voz = "latido";
-
-//var gato = new Mamiferos();
-//gato.voz = "miado";
-
-//console.log(cachorro.voz);
-//console.log(gato.corDoOlho);
-//console.log(gato.voz);
-
-/*
-
-A idéia em si da definição de um objeto é chamada axioma na matemática.
-A gente sabe o que é mas não sabemos definir.
-
-
-O que é uma classe e o que é um objeto?
-
-
-OBJETO
-
-Um objeto é qualquer coisa que possua características.
-
-Ele sempre terá características ou propriedades, mas nem sempre ele terá ações.
-
-Por exemplo, um copo pode ser um simples objeto inanimado.
-
-
-CLASSE
-
-Uma classe é um objeto que possui características, como:
-quantidade de patas, membros, cor de olho, etc... e possui ações como:
-andar, falar, etc...
-
-As ações chamamos de métodos.
-
-Vamos a um exemplo:
-
-Objeto: carro
-Propriedade/ característica: velocidade (a velocidade que consegue atingir)
-Métodos/ ações: aceleração, trocar marcha
-
-Obs.: Toda classe deve se iniciar com letra maiúscula
-
-
-Recapitulando,...
-
-Toda característica do meu objeto eu chamo de propriedades.
-Toda ação do meu objeto eu chamo de métodos.
-Um objeto possui somente propriedades.
-Uma classe possui as propriedades do objeto + seus métodos.
-
-*/
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _Mamiferos2 = __webpack_require__(2);
-
-var _Mamiferos3 = _interopRequireDefault(_Mamiferos2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Cachorro = function (_Mamiferos) {
-    _inherits(Cachorro, _Mamiferos);
-
-    function Cachorro() {
-        _classCallCheck(this, Cachorro);
-
-        var _this = _possibleConstructorReturn(this, (Cachorro.__proto__ || Object.getPrototypeOf(Cachorro)).call(this));
-
-        _this.voz = "latido";
-        return _this;
-    }
-
-    return Cachorro;
-}(_Mamiferos3.default);
-
-exports.default = Cachorro;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -204,24 +78,22 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// Este é um exemplo de objeto; é preciso escrever algumas propriedades que vão definir o objeto
+/* Vamos criar um método falar() dentro da classe Mamiferos */
 
 var Mamiferos = function () {
 	function Mamiferos() {
 		_classCallCheck(this, Mamiferos);
 
-		this.voz = "latido";
-		this.corDoOlho = "preto";
+		this.voz = "";
+		this.corDoOlho = "";
 	}
 
 	_createClass(Mamiferos, [{
 		key: "falar",
 		value: function falar() {
+			/* this representa a classe Mamiferos;
+   voz é a variável que estou pegando dentro dessa classe */
 			console.log(this.voz);
-			/*
-   this é uma variável que se refere à classe Mamiferos ao qual essa função
-   falar() se encontra dentro dela
-   */
 		}
 	}]);
 
@@ -230,15 +102,111 @@ var Mamiferos = function () {
 
 exports.default = Mamiferos;
 
+/* ANOTAÇÃO ANTERIOR */
+
+/* Este é um exemplo de objeto; é preciso escrever algumas propriedades que vão
+definir o objeto */
+
+// class Mamiferos {
+// 	voz = "";
+// 	corDoOlho = "preto";
+// }
+
+// export default Mamiferos;
+
 /*
-ANOTAÇÃO ANTERIOR
 Agora, este objeto está definido mas ainda não existe.
 Para existir, quando criamos um objeto real a gente instancia,
 por isso, vamos importar esse objeto lá na classe Main.
 */
 
 /***/ }),
-/* 3 */
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Gato = __webpack_require__(2);
+
+var _Gato2 = _interopRequireDefault(_Gato);
+
+var _Cachorro = __webpack_require__(3);
+
+var _Cachorro2 = _interopRequireDefault(_Cachorro);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+HERANÇA
+
+Serve para quando queremos evoluir um objeto, sem se desfazer do objeto anterior.
+Herda as características do objeto anterior e acrescenta/ extende novas funcionalidades.
+*/
+
+var bingo = new _Cachorro2.default();
+var felix = new _Gato2.default();
+
+bingo.falar();
+felix.falar();
+
+/* ANOTAÇÃO ANTERIOR */
+
+/* Primeiro, eu importo aquele objeto Mamiferos com 'import' para poder acessar
+suas propriedades */
+// import Mamiferos from './Mamiferos';
+
+/* Depois, eu instancio o objeto para torná-lo real */
+// var cachorro = new Mamiferos();
+
+/* Para acessar as propriedades do objeto, eu uso o "." e posso modificar/
+reescrever o valor que ele recebe */
+// cachorro.voz = "latido";
+
+// var gato = new Mamiferos();
+// gato.voz = "miado";
+
+// console.log(cachorro.voz);
+// console.log(gato.corDoOlho);
+// console.log(gato.voz);
+
+
+/*
+A idéia em si da definição de um objeto é chamada axioma, na matemática.
+A gente sabe o que é mas não sabemos definir.
+
+O que é uma classe e o que é um objeto?
+
+OBJETO
+
+Um objeto é qualquer coisa que possua características.
+Ele sempre terá características ou propriedades, mas nem sempre ele terá ações.
+Por exemplo, um copo pode ser um simples objeto inanimado.
+
+CLASSE
+
+Uma classe é um objeto que possui características, como:
+quantidade de patas, membros, cor de olho, etc... e possui ações como:
+andar, falar, etc...
+
+As ações chamamos de métodos. Vamos a um exemplo:
+
+Objeto: carro
+Propriedade/ característica: velocidade (a velocidade que consegue atingir)
+Métodos/ ações: aceleração, trocar marcha
+
+Obs.: Toda classe deve se iniciar com letra maiúscula
+
+Recapitulando,...
+
+Toda característica do meu objeto eu chamo de propriedades.
+Toda ação do meu objeto eu chamo de métodos.
+Um objeto possui somente propriedades.
+Uma classe possui as propriedades do objeto + seus métodos.
+*/
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -248,7 +216,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _Mamiferos2 = __webpack_require__(2);
+var _Mamiferos2 = __webpack_require__(0);
 
 var _Mamiferos3 = _interopRequireDefault(_Mamiferos2);
 
@@ -276,6 +244,65 @@ var Gato = function (_Mamiferos) {
 }(_Mamiferos3.default);
 
 exports.default = Gato;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _Mamiferos2 = __webpack_require__(0);
+
+var _Mamiferos3 = _interopRequireDefault(_Mamiferos2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               A classe Cachorro.js é uma nova classe criada, que herdará as mesmas características
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               da classe Mamiferos (com extends) e terá novas características próprias desse
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               animal cachorro; para tanto, é necessário importar a classe Mamiferos (com import);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no final, exportamos a classe Cachorro (com export) para conseguirmos utilizá-la
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               em outros lugares
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+
+var Cachorro = function (_Mamiferos) {
+    _inherits(Cachorro, _Mamiferos);
+
+    /* dentro desse bloco representa coisas que só a classe Cachorro possui */
+    /*
+    Constructor representa uma função especial dentro de uma classe; tudo o que
+    estiver dentro do método constructor() significa que vai ser executado no
+    momento em que for instanciado o objeto Cachorro
+    */
+    function Cachorro() {
+        _classCallCheck(this, Cachorro);
+
+        var _this = _possibleConstructorReturn(this, (Cachorro.__proto__ || Object.getPrototypeOf(Cachorro)).call(this));
+
+        _this.voz = "latido";
+        /*
+        Sempre q se extende uma classe, ela é chamada de superclasse. No caso,
+        Mamiferos é a superclasse e Cachorro é a subclasse; esse this faz
+        referência às características existentes dentro da classe Mamiferos,
+        logo, é obrigatório declarar super() acima de tudo, ao pegar características
+        do objeto herdado
+        */
+        return _this;
+    }
+
+    return Cachorro;
+}(_Mamiferos3.default);
+
+exports.default = Cachorro;
 
 /***/ })
 /******/ ]);

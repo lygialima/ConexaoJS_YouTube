@@ -1,12 +1,10 @@
 import Mamiferos from './Mamiferos';
 
 class Gato extends Mamiferos {
-
-    constructor(){
+    constructor() {
         super();
         this.voz = "miado";
     }
-    
 }
 
 export default Gato;
