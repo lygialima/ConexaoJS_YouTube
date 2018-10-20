@@ -1,19 +1,53 @@
+/*
+Meu primeiro objetivo é fazer com que o meu navegador reconheça que uma página
+HTML foi criada com o meu objeto Botao; preciso adicionar um evento para isso
+com o window (que corresponde à janela do navegador; objeto de mais alto nível)
+*/
+
 import Botao from './Botao';
 import SuperBotao from './SuperBotao';
 
+/*
+window.onload significa carregamento de página; após carregar a página, ele vai
+executar uma função que, no caso, utilizo uma arrow function para indicá-la
+*/
 window.onload = () => {
+    /*
+    Aqui dentro preciso, primeiro, trazer meu objeto Botao pra cá, ou seja, tenho
+    que instanciá-lo para que ele possa ser visualizado na página, então, é
+    necessário importá-lo antes de tudo com import (ver acima), depois eu crio
+    uma variável para instanciar Botao; detalhe técnico: não esquecer do () para
+    representar uma instância
+    */
     var bt = new Botao();
-    bt.addText('clique aqui');
-
-    var superbt = new SuperBotao();
-    superbt.addText('super botao');
-    superbt.addEvents();
-
+    /*
+    Para mostrar a div que criei no objeto Botao, basta usar o método appendChild,
+    indicando o elemento pai (body) dentro do documento HTML (document); o
+    parâmetro de appendChild é a variável view, que representa o conteúdo da div
+    que está dentro da classe Botao, indicada pela var bt; feito isto, vamos voltar
+    à classe Botao para adicionar informações sobre o texto que vai ser inserido
+    no botao através deste arquivo Main
+    */
     document.body.appendChild(bt.view);
+    /*
+    Agora, vou chamar a função (addText()) que renderiza texto no objeto Botao
+    (bt), e vou inserir como argumento o texto desejado
+    */
+    bt.addText("clique aqui");
+
+    /*
+    Acrescentando informações do SuperBotao; lá em cima já o importei com import,
+    e aqui embaixo estou instanciando-o, inserindo a view dele e adicionando
+    texto, igual como fiz para Botao
+    */
+    var superbt = new SuperBotao();
     document.body.appendChild(superbt.view);
+    superbt.addText("super botão");
+    /*
+    Agora, vou chamar a função nova que criei lá
+    */
+    superbt.addEvents();
 }
-
-
 
 
 
