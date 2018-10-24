@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,97 @@
 "use strict";
 
 
-var _Botao = __webpack_require__(1);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/*
+Meu objetivo nesta tarefa é criar um botão vermelho, cujo texto do botão poderá
+ser adicionado e modificado através da Main.js
+
+Para isso ser possível, eu preciso criar o objeto botão, então, eu crio um arquivo
+novo chamado Botao.js, que é este arquivo
+
+Primeiro Passo: inicializar a classe Botao; todo código deve constar dentro dela
+*/
+
+var Botao = function () {
+
+    /*
+    Agora, vou usar o método constructor, a lembrar que ele representa o primeiro
+    método que quero que seja executado; a seguir, a var view vai receber um
+    valor, fazendo referência à var desta classe com this
+    */
+    function Botao() {
+        _classCallCheck(this, Botao);
+
+        this.view = null;
+
+        /*
+        Para criar um elemento HTML é preciso acessar o documento da página com
+        document e usar o método createElement() adicionando a tag desejada
+        */
+        this.view = document.createElement('div');
+        /*
+        Agora, já posso fazer as configurações de CSS do meu botão referenciando
+        novamente à var this.view, que já representa uma tag div do HTML
+        */
+        this.view.style.cssText = '\n            width: 250px;\n            background: red;\n            padding: 20px 0;\n            color: white;\n            font-family: sans-serif;\n            font-size: 30px;\n            text-align: center;\n        ';
+    }
+
+    /*
+    Agora, vou inserir uma ação ao objeto, cujo método permitirá que eu escreva
+    qualquer texto no botão através da Main; nomeei esse método de addText do
+    qual ele necessitará receber um parâmetro para funcionar, cuja variável a
+    nomeei de text
+    */
+
+    /*
+    Primeiro, comecei descrevendo uma variável q coloquei o nome de view, que
+    representará graficamente o formato do botão que quero criar; null significa
+    que ainda não quero definir nenhum valor nela
+    */
+
+
+    _createClass(Botao, [{
+        key: 'addText',
+        value: function addText(text) {
+            /*
+            Aqui, no bloco da função, não preciso chamar outro método para executar
+            essa tarefa, como o document.write(). Eu posso simplificar e especificar
+            melhor minha intenção, com a propriedade de string chamada innerText que
+            renderizará o texto dentro do nó div, bastando atribuir essa declaração
+            ao parâmetro deste método. Assim feito, é só chamar esta função na Main
+            */
+            this.view.innerText = text;
+        }
+    }]);
+
+    return Botao;
+}();
+
+/*
+Exportar a classe para que eu possa usá-la em outros lugares, seja instanciando
+ela na classe Main, seja herdando ela em outro objeto; nesse momento, já estou
+apta a fazer aparecer esse objeto na tela do meu navegador através da classe Main,
+então, vamos à ela!
+*/
+
+
+exports.default = Botao;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Botao = __webpack_require__(0);
 
 var _Botao2 = _interopRequireDefault(_Botao);
 
@@ -203,96 +293,6 @@ Uma classe possui as propriedades do objeto + seus métodos.
 */
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/*
-Meu objetivo nesta tarefa é criar um botão vermelho, cujo texto do botão poderá
-ser adicionado e modificado através da Main.js
-
-Para isso ser possível, eu preciso criar o objeto botão, então, eu crio um arquivo
-novo chamado Botao.js, que é este arquivo
-
-Primeiro Passo: inicializar a classe Botao; todo código deve constar dentro dela
-*/
-
-var Botao = function () {
-
-    /*
-    Agora, vou usar o método constructor, a lembrar que ele representa o primeiro
-    método que quero que seja executado; a seguir, a var view vai receber um
-    valor, fazendo referência à var desta classe com this
-    */
-    function Botao() {
-        _classCallCheck(this, Botao);
-
-        this.view = null;
-
-        /*
-        Para criar um elemento HTML é preciso acessar o documento da página com
-        document e usar o método createElement() adicionando a tag desejada
-        */
-        this.view = document.createElement('div');
-        /*
-        Agora, já posso fazer as configurações de CSS do meu botão referenciando
-        novamente à var this.view, que já representa uma tag div do HTML
-        */
-        this.view.style.cssText = '\n            width: 250px;\n            background: red;\n            padding: 20px 0;\n            color: white;\n            font-family: sans-serif;\n            font-size: 30px;\n            text-align: center;\n        ';
-    }
-
-    /*
-    Agora, vou inserir uma ação ao objeto, cujo método permitirá que eu escreva
-    qualquer texto no botão através da Main; nomeei esse método de addText do
-    qual ele necessitará receber um parâmetro para funcionar, cuja variável a
-    nomeei de text
-    */
-
-    /*
-    Primeiro, comecei descrevendo uma variável q coloquei o nome de view, que
-    representará graficamente o formato do botão que quero criar; null significa
-    que ainda não quero definir nenhum valor nela
-    */
-
-
-    _createClass(Botao, [{
-        key: 'addText',
-        value: function addText(text) {
-            /*
-            Aqui, no bloco da função, não preciso chamar outro método para executar
-            essa tarefa, como o document.write(). Eu posso simplificar e especificar
-            melhor minha intenção, com a propriedade de string chamada innerText que
-            renderizará o texto dentro do nó div, bastando atribuir essa declaração
-            ao parâmetro deste método. Assim feito, é só chamar esta função na Main
-            */
-            this.view.innerText = text;
-        }
-    }]);
-
-    return Botao;
-}();
-
-/*
-Exportar a classe para que eu possa usá-la em outros lugares, seja instanciando
-ela na classe Main, seja herdando ela em outro objeto; nesse momento, já estou
-apta a fazer aparecer esse objeto na tela do meu navegador através da classe Main,
-então, vamos à ela!
-*/
-
-
-exports.default = Botao;
-
-/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -305,7 +305,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Botao2 = __webpack_require__(1);
+var _Botao2 = __webpack_require__(0);
 
 var _Botao3 = _interopRequireDefault(_Botao2);
 
