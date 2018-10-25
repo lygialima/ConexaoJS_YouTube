@@ -1,4 +1,4 @@
-1 - Criando um servidor Node
+## Criando um servidor Node
 
 Para rodar o servidor na pasta teste_umbler, basta acessar a pasta e digitar:
 
@@ -9,8 +9,7 @@ Para rodar o servidor na pasta teste_umbler, basta acessar a pasta e digitar:
     Acesse o navegador e digite 127.0.0.1:3000
 
 
-
-2 - Usando o framework Express
+## Usando o framework Express
 
 Para rodar o servidor na pasta teste_umbler2, basta acessar a pasta e digitar:
 

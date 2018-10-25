@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
 /**
+ * Aqui e o start da nossa aplicacao, porem, ele nao tem a logica.
+ */
+ 
+/**
  * Module dependencies.
  */
 
